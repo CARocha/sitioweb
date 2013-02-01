@@ -12,7 +12,7 @@ def globales(request):
 	return {'portada': portada, 'domingo': domingo, 'timestamp':timestamp}
 
 def domingo_taller(now):
-    _4PM = datetime.time(hour=19)
+    _4PM = datetime.time(hour=19,minute=30)
     _JUE = 6  # Monday=0 for weekday()
     old_now = now
     now += datetime.timedelta((_JUE - now.weekday()) % 7)
